@@ -1,0 +1,55 @@
+/* estilos.css */
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.lista > div {
+  flex: 0 1 calc(33.333% - 40px); /* Cada produto ocupará um terço da linha */
+  max-width: calc(
+    33.333% - 40px
+  ); /* Garantir que o tamanho máximo também seja um terço */
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  // border-radius: 10px;
+  // overflow: hidden;
+  // transition: transform 0.2s;
+}
+
+.produto {
+  //width: 100%; /* Assegura que o componente filho ocupe toda a largura do contêiner pai */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .lista > div:hover {
+//   transform: scale(1.05);
+// }
+
+/* Ajustar para telas menores */
+@media (max-width: 1024px) {
+  .lista > div {
+    flex: 0 1 calc(50% - 40px); /* 2 por linha em telas médias */
+    max-width: calc(
+      50% - 40px
+    ); /* Garantir que o tamanho máximo também seja metade */
+  }
+}
+
+@media (max-width: 768px) {
+  .lista > div {
+    flex: 0 1 100%; /* 1 por linha em telas pequenas */
+    max-width: 100%; /* Garantir que o tamanho máximo também seja 100% */
+  }
+}
