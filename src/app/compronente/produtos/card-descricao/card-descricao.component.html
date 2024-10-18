@@ -1,10 +1,10 @@
 <h3>Descricao do Produto</h3>
 <div class="produto">
   <p>Id: {{ produto.id }}</p>
-  <p>Nome: {{ produto.nome }}</p>
+  <p>Produto: {{ produto.nome }}</p>
   <img [src]="produto.imagem" alt="" />
   <p>Descricao: {{ produto.descricao }}</p>
   <p>Preco: {{ produto.preco | currency : "BRL" }}</p>
-  <p>Estoque: {{ produto.quantidade }}</p>
+  <p>Estoque: {{ produto.quantidade }} unidades</p>
   <Button [routerLink]="['/produto']">Voltar</Button>
 </div>
